@@ -1,0 +1,220 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+div.contenedor{
+  max-width: 1100px;
+  margin: 0 auto;
+}
+header{
+  width: 100%;
+  background-color: #ff5722;
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header::after{
+  display: block;
+  clear: both;
+  content: '';
+}
+div.logo{
+  width: 30%;
+  float: left;
+  padding: 10px;
+}
+div.logo a{
+  text-decoration: none;
+  display: inline-block;
+}
+div.logo h2.logo{
+  font-family: 'Pacifico', cursive;
+  font-size: 50px;
+  color: white;
+}
+div.navegacion{
+  float: right;
+}
+div.navegacion nav ul{
+  list-style: none;
+}
+div.navegacion nav ul li{
+  float: left;
+  padding: 15px;
+}
+div.navegacion nav ul li a{
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  font-family: 'Rubik', sans-serif;
+}
+div.navegacion nav ul li a:hover{
+  color: #1d1917;
+}
+
+/*-- NAV --*/
+/* -- Login --*/
+div.portada{
+  width: 100%;
+  height: 100vh;
+  background-color: #dcdcdc;
+  padding: 2% 0;
+}
+
+div.portada div.contenedor{
+  background-color: white;
+  width: 90%;
+  max-width: 1100px;
+  height: 100vh;
+  margin: 0 auto;
+  border-radius: 2%;
+  box-shadow: 0px 0px 10px #888888;
+}
+div.contenedor-login{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+/*.logo-form{
+  font-family: 'Pacifico', cursive;
+  font-size: 40px;
+  color: #d2d2d2;
+  margin-bottom: 10%;
+}
+div.contenedor-login div.formulario input.input{
+  margin-bottom: 20%;
+  font-size: 16px;
+  text-align: center;
+  padding: 10px 10px;
+  font-family: 'Rubik', sans-serif;
+}
+div.contenedor-login div.formulario input.btn-enviar{
+  padding: 10px 30px;
+  font-family: 'Rubik', sans-serif;
+  background-color: #ff5722;
+  color: white;
+  border: 0;
+  margin-top: 5%;
+}
+div.contenedor-login div.formulario input.btn-enviar:hover{
+  background-color: #1d1917;
+  cursor: pointer;
+}
+div.contenedor-login p{
+  color: #1d1917;
+  font-family: 'Rubik', sans-serif;
+  margin-top: 10%;
+  font-size: 14px;
+}
+div.contenedor-login p a{
+  color: #ff5722;
+  text-decoration: none;
+}*/
+#customers {
+    margin-top: 5%;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 90%;
+}
+
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #1d1917;
+    color: white;
+}
+#customers td{
+  text-align: left;
+}
+#customers td button{
+  padding: 10px 30px;
+  font-family: 'Rubik', sans-serif;
+  background-color: #ff5722;
+  color: white;
+  border: 0;
+  margin: 0 10px;
+}
+#customers td button:hover{
+  background-color: #1d1917;
+  cursor: pointer;
+}
+#customers th.notas{
+  width: 70%;
+}
+#customers th.accion{
+  width: 30%;
+}
+#customers td.celdaAccion{
+  text-align: center;
+}
+
+div.contenedor-login button.btn-addNota{
+  color: white;
+  text-decoration: none;
+  font-size: 50px;
+  background-color: #ff5722;
+  font-weight: bold;
+  padding: 7px 15px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 1%;
+  right: 1%;
+  border: 0;
+}
+div.contenedor-login button.btn-addNota:hover{
+  background-color: #1d1917;
+  cursor: pointer;
+}
+
+/*---------------Footer---------*/
+
+footer{
+  width: 100%;
+  background-color: #1d1917;
+  padding: 30px 0;
+  border-top: 5px solid #ff5722;
+}
+footer div.nosotros h2.logo-footer{
+  font-family: 'Pacifico', cursive;
+  font-size: 30px;
+  color: #d2d2d2;
+  display: block;
+}
+footer div.flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer div.nosotros,
+footer div.redes{
+  width: 30%;
+}
+footer div.copyright{
+  margin-bottom: -30px;
+  text-align: center;
+  padding: 10px 0;
+  color: #d2d2d2;
+  background-color: rgba(0, 0, 0, .3);
+  margin-top: 20px;
+  font-family: 'Rubik', sans-serif;
+  font-size: 12px;
+}
+div.redes img{
+  height: 30px;
+  margin: 0 20px;
+}
