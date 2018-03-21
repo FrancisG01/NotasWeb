@@ -1,24 +1,44 @@
+<?php
+  session_start();
+  error_reporting(0);
+  $login = $_SESSION['Login'];
+
+  $iSesion = '<a href="login.php">Iniciar Sesión</a>';
+  $cSesion = '<a href="loginout.php">Cerrar Sesión</a>';
+
+  if($login>0){
+    $icSesion = $cSesion;
+  }
+  else{
+    $icSesion = $iSesion;
+  }
+  if($login>0){
+    header("location:notas.php");
+    die();
+  }
+
+?>
 <!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="UTF-8">
-    <title>NotasWeb</title>
-    <link rel="stylesheet" href="css/registrarse-estilos.css">
+    <title>NotasWeb | Mis Notas</title>
+    <link rel="stylesheet" href="css/notas-estilos.css">
     <link href="https://fonts.googleapis.com/css?family=Cabin:700|Pacifico|Rubik:500" rel="stylesheet">
   </head>
   <body>
     <header>
       <div class="contenedor header">
         <div class="logo">
-          <a href="index.html"><h2 class="logo">NotasWeb</h2></a>
+          <a href="index.php"><h2 class="logo">NotasWeb</h2></a>
         </div>
         <div class="navegacion">
           <nav>
             <ul>
-              <li><a href="index.html">Inicio</a></li>
-              <li><a href="notas.html">Mis Notas</a></li>
-              <li><a href="login.html">Iniciar Sesión</a></li>
-              <li><a href="registrarse.html">Registrarse</a></li>
+              <li><a href="index.php">Inicio</a></li>
+              <li><a href="notas.php">Mis Notas</a></li>
+              <li><?php echo $icSesion ?></li>
+              <li><a href="registrarse.php">Registrarse</a></li>
             </ul>
           </nav>
         </div>
@@ -28,26 +48,12 @@
      <div class="portada">
        <div class="contenedor">
          <div class="contenedor-login">
-           <div class="formulario">
-
-             <h2 class="logo-form">NotasWeb</h2>
-             <form class="datos-login" method="post">
-
-               <input type="text" name="usuario" placeholder="Usuario" class="input" autofocus>
-
-               <br>
-               <input type="email" name="email" placeholder="Correo Electronico" class="input">
-
-               <br>
-               <input type="password" name="password" placeholder="Contraseña" class="input">
-
-               <br>
-               <input type="submit" name="registrarse" value="Registrarse" class="btn-enviar">
-
-             </form>
-
-             <p>¿Ya tienes cuenta? <a href="login.html">Inicia Sesión</a></p>
-
+           <div class="bienvenida">
+              <h2>Registro Completado</h2>
+               <h3>Gracias por registrarse en nuestra web, ya puede ingresar como usuario</h3>
+              
+               <br><br>
+               <a href="login.php"  class="btn-iniciar-Sesion">Iniciar Sesión</a>
            </div>
          </div>
        </div>
