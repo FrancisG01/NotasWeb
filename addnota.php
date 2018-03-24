@@ -1,7 +1,8 @@
 <?php
   session_start();
   error_reporting(0);
-
+  $conexion = mysqli_connect('localhost','root','','dbusuarios');
+  $usuario = $_SESSION['usuario'];
   $login = $_SESSION['Login'];
 
   $iSesion = '<a href="login.php">Iniciar Sesión</a>';
@@ -13,14 +14,27 @@
   else{
     $icSesion = $iSesion;
   }
+
+  if($login <= 0){
+    header("location:loginaux.php");
+    die();
+  }
 ?>
 <!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="UTF-8">
-    <title>NotasWeb  | Inicio</title>
-    <link rel="stylesheet" href="css/estilos.css">
+    <title>NotasWeb | Mis Notas</title>
+    <link rel="stylesheet" href="css/addmod-estilos.css">
     <link href="https://fonts.googleapis.com/css?family=Cabin:700|Pacifico|Rubik:500" rel="stylesheet">
+    <style>
+            table td.id{
+              display: none;
+            }
+            table tr td.id{
+              display: none;
+            }
+    </style>
   </head>
   <body>
     <header>
@@ -42,11 +56,28 @@
     </header>
 
      <div class="portada">
-       <div class="titulo">
-        <h2>¡Un sitio web para guardar <br>tus notas!</h2>
-       </div>
-       <div class="boton">
-        <a href="login.php" class="btn-comenzar">Comenzar</a>
+       <div class="contenedor">
+         <div class="contenedor-login">
+           <div class="bienvenida">
+              <h2>Crear una Nueva Nota</h2>
+           </div>
+
+           <?php
+                    $id = $_REQUEST['id'];
+                    $link = mysqli_connect("localhost","root","", "dbusuarios") or die("<h2>No se encuentra el servidor</h2>");
+
+                    $query = "SELECT * FROM notas WHERE id='$id'";
+                    $resultado = mysqli_query($link,$query);
+                    $row = mysqli_fetch_assoc($resultado);
+                ?>
+                <form action="add.php" method="POST">
+                    <input class="campo-titulo" type="text" placeholder="Titulo de la nota" name="titulo_nota" required>
+                    <br><br>
+                    <textarea name="nota" class="textarea" cols="30" rows="10" placeholder="Escribe aqui tu nota..." required></textarea>
+                    <br><br>
+                    <input class="btn-guardar" type="submit" name="enviar" value="Guardar">
+                </form>
+         </div>
        </div>
      </div>
 
@@ -73,6 +104,5 @@
         <p>&copy; Todos los derechos reservados | Francis Design 2018</p>
       </div>
     </footer>
-
   </body>
 </html>

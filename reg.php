@@ -33,6 +33,29 @@ if($pass != $cpass){
   ');
 }
 
+//Contar el minimo de caracteres para las contraseñas
+$passCuenta = strlen($pass);
+
+if($passCuenta < 8){
+    die ('
+    <script>
+    alert("La contraseña debe contener al menos 8 caractenes");
+    window.history.go(-1);
+  </script>
+  ');
+}
+//Contar el minimo de caracteres para los usuarios
+$usuarioCuenta = strlen($usuario);
+
+if($usuarioCuenta < 8){
+    die ('
+    <script>
+    alert("El nombre de usuario debe contener al menos 8 caractenes");
+    window.history.go(-1);
+  </script>
+  ');
+}
+
 //Se encripta la contraseña
 $pass = md5($pass);
 

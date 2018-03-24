@@ -47,7 +47,7 @@
            <div class="formulario">
 
              <h2 class="logo-form">NotasWeb</h2>
-             <form class="datos-login" method="post" action="reg.php">
+             <form class="datos-login" method="post" action="reg.php" >
 
                <input type="text" name="usuario" placeholder="Usuario" class="input" autofocus required>
 
@@ -55,13 +55,13 @@
                <input type="email" name="correo" placeholder="Correo Electronico" class="input" required>
 
                <br>
-               <input type="password" name="password" placeholder="Contraseña" class="input" required>
+               <input type="password" name="password" placeholder="Contraseña" class="input" required id="minchar">
 
                <br>
-               <input type="password" name="cpassword" placeholder="Confirmar Contraseña" class="input" required>
+               <input type="password" name="cpassword" placeholder="Confirmar Contraseña" class="input" required >
 
                <br>
-               <input type="submit" name="registrarse" value="Registrarse" class="btn-enviar" required>
+               <input type="submit" name="registrarse" value="Registrarse" class="btn-enviar" required >
 
              </form>
              <p>¿Ya tienes cuenta? <a href="login.php">Inicia Sesión</a></p>

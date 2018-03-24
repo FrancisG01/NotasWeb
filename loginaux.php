@@ -25,6 +25,12 @@
     <title>NotasWeb | Mis Notas</title>
     <link rel="stylesheet" href="css/notas-estilos.css">
     <link href="https://fonts.googleapis.com/css?family=Cabin:700|Pacifico|Rubik:500" rel="stylesheet">
+    <style>
+      div.portada div.contenedor div.contenedor-login div.bienvenida a:hover{
+        background-color: #1d1917;
+    
+        }
+      </style>
   </head>
   <body>
     <header>
@@ -51,7 +57,7 @@
            <div class="bienvenida">
               <h2>Aun no ha iniciado sesión</h2>
                <br><br>
-               <a href="login.php"  class="btn-iniciar-Sesion">Iniciar Sesión</a>
+               <a href="login.php">Iniciar Sesión</a>
            </div>
          </div>
        </div>
